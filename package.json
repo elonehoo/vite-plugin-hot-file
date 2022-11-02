@@ -1,11 +1,11 @@
 {
-  "name": "@titem/monorepo",
+  "name": "vite-plugin-hot-file-monorepo",
   "private": "true",
   "description": "Starter template for TypeScript library",
   "author": "Elone Hoo <huchengyea@163.com>",
   "type": "module",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "scripts": {
     "prepare": "pnpm -r run stub",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
