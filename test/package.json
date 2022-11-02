@@ -1,7 +1,7 @@
 {
-  "name": "@titem/test",
+  "name": "@vite-plugin-hot-file/test",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "description": "Starter template for TypeScript library",
   "author": "Elone Hoo <huchengyea@163.com>",
