@@ -7,6 +7,7 @@
   "license": "MIT",
   "version": "0.0.1-beta.0",
   "scripts": {
+    "dev":"pnpm -C example run dev",
     "build": "pnpm -C core run build",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
     "test": "pnpm -C test run test",

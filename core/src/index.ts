@@ -13,10 +13,10 @@ function HotFile(): Plugin {
     config(config,{ command }){
       excuteAutoExport()
       if(command === 'serve'){
-        loadConfig<ExportConfig>({
+        loadConfig<HotFileConfig>({
           sources: [
             {
-              files: 'export.config',
+              files: 'hotfile.config',
               extensions: ['ts', 'mts', 'cts', 'js', 'mjs', 'cjs', 'json', ''],
             },
           ],
@@ -59,14 +59,14 @@ interface Config {
   autoPrefix?: boolean
 }
 
-export interface ExportConfig {
+export interface HotFileConfig {
   configs: Array<Config>
 }
 
-function defineExportConfig(config: ExportConfig): ExportConfig {
+function defineConfig(config: HotFileConfig): HotFileConfig {
   return config
 }
 
-export { defineExportConfig }
+export { defineConfig }
 
 export default HotFile

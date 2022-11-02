@@ -1,19 +1,16 @@
-import path from 'path'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import Unocss from 'unocss/vite'
-
+import react from '@vitejs/plugin-react'
+import HotFile from 'vite-plugin-hot-file'
+import svgr from 'vite-plugin-svgr'
 // https://vitejs.dev/config/
 export default defineConfig({
-  resolve: {
-    alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
-    },
-  },
   plugins: [
-    vue({
-      reactivityTransform: true,
-    }),
-    Unocss()
-  ],
+    react(),
+    HotFile(),
+    svgr({
+      svgrOptions: {
+        icon: true,
+      },
+    })
+  ]
 })
