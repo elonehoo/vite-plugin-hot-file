@@ -5,8 +5,26 @@
   "description": "Starter template for TypeScript library",
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elonehoo/vite-plugin-hot-file"
+  },
+  "homepage": "https://github.com/elonehoo/vite-plugin-hot-file#readme",
+  "bugs": "https://github.com/elonehoo/vite-plugin-hot-file/issues",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rimraf dist && vite build",
+    "build": "rimraf dist && tsup src/index.ts --dts --format esm,cjs",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
@@ -16,5 +34,8 @@
     "auto-export": "^0.3.7",
     "chokidar": "^3.5.3",
     "unconfig": "^0.3.7"
+  },
+  "peerDependencies": {
+    "vite":">=3.0.0"
   }
 }
