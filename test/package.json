@@ -7,9 +7,12 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "vitest": "0.24.5"
+    "vitest": "0.24.5",
+    "@vitest/coverage-c8": "^0.24.3",
+    "c8": "^7.12.0"
   }
 }

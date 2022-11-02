@@ -8,9 +8,8 @@
   "version": "0.0.1-beta.0",
   "scripts": {
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
-    "typeCheck": "tsc --noEmit",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "test": "pnpm -C test run test",
+    "coverage":"pnpm -C test run coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
